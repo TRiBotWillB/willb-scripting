@@ -1,11 +1,19 @@
 <template>
-    <b-col cols="3">
+    <b-col cols="3" class="script">
         <div class="thumbnail">
             <img :src="imgSrc">
-            <div class="caption-left">{{price}}</div>
+            <div class="caption-left">{{price ? price : 'FREE'}}</div>
         </div>
 
-        <h3 class="script-title">{{scriptName}}</h3>
+        <h4 class="script-title">{{scriptName}}</h4>
+        <p v-if="price">
+            <font-awesome-icon :icon="['fas', 'shopping-cart']" />
+            Purchase
+        </p>
+        <p v-else>
+            <font-awesome-icon :icon="['fas', 'flask']" />
+            Activate1
+        </p>
     </b-col>
 </template>
 
@@ -28,21 +36,9 @@
         max-width: 100%;
     }
 
-    h3 {
-        margin: 40px 0 0;
-    }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-
-    a {
-        color: #42b983;
+    .script {
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 200;
     }
 </style>
