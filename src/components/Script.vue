@@ -31,14 +31,17 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-    .thumbnail img {
-        max-width: 100%;
-    }
+<style lang="sass">
 
-    .script {
-        text-align: left;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 200;
-    }
+    .thumbnail img
+        max-width: 100%
+
+
+    .script
+        font-family: 'Oswald', sans-serif
+        text-align: left
+
+        .script-title
+            font-weight: 300
+
 </style>

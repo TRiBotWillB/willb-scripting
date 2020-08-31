@@ -6,7 +6,7 @@
 
         <b-container>
             <b-row>
-                <Script scriptName="FARMER" price="$9.99" imgSrc="img/Farmer.png"/>
+                <Script v-for="script in premiumScripts" :key="script.scriptName" :scriptName="script.scriptName" :price="script.price" :imgSrc="script.imgSrc"/>
             </b-row>
             <b-row>
                 <Script scriptName="WOODCUTTER" price="" imgSrc="img/Woodcutter.png"/>
@@ -24,6 +24,27 @@
         components: {
             Script,
             Nav
+        },
+        data() {
+            return {
+                premiumScripts: [
+                    {
+                        scriptName: "FARMER",
+                        price: "$9.99",
+                        imgSrc: "img/Farmer.png",
+                    },
+                    {
+                        scriptName: "CLUE SCROLLER",
+                        price: "$4.99",
+                        imgSrc: "img/ClueScroller.png",
+                    },
+                    {
+                        scriptName: "BLAST FURNACE",
+                        price: "$4.99",
+                        imgSrc: "img/BlastFurnace.png",
+                    }
+                ]
+            }
         }
     }
 </script>
@@ -31,6 +52,7 @@
 <style lang="sass">
     @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap')
     @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap')
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@200;300;400&display=swap')
 
     #app
         font-family: Avenir, Helvetica, Arial, sans-serif
@@ -41,6 +63,9 @@
     html, body
         background-color: #23272A
         color: white
+
+        font-family: 'Oswald', sans-serif
+        font-weight: 200
 
     #header
         font-family: 'Lobster', cursive

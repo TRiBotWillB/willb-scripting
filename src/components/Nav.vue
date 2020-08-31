@@ -1,7 +1,7 @@
 <template>
     <nav>
         <ul class="list-inline">
-            <li class="list-inline-item">
+            <li class="list-inline-item active">
                 Home
             </li>
             <li class="list-inline-item">
@@ -37,17 +37,11 @@
         margin: 40px 0 0;
     }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
     li {
-        display: inline-block;
-        margin: 0 10px;
+        font-size: 1.5em;
     }
 
-    a {
-        color: #42b983;
+    li.active {
+        border-bottom: 2px solid white !important;
     }
 </style>
