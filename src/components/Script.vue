@@ -7,12 +7,16 @@
 
         <h4 class="script-title">{{scriptName}}</h4>
         <p v-if="price">
-            <font-awesome-icon :icon="['fas', 'shopping-cart']" />
-            Purchase
+            <a :href='scriptLink'>
+                <font-awesome-icon :icon="['fas', 'shopping-cart']"/>
+                Purchase
+            </a>
         </p>
         <p v-else>
-            <font-awesome-icon :icon="['fas', 'flask']" />
-            Activate1
+            <a :href="scriptLink">
+                <font-awesome-icon :icon="['fas', 'flask']"/>
+                Activate
+            </a>
         </p>
     </b-col>
 </template>
@@ -25,17 +29,20 @@
             scriptName: String,
             price: String,
             imgSrc: String,
+            scriptLink: String
         }
 
     }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="sass">
+<style lang="sass" scoped>
 
     .thumbnail img
         max-width: 100%
 
+    a
+        color: white !important
 
     .script
         font-family: 'Oswald', sans-serif

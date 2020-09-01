@@ -1,14 +1,14 @@
 <template>
-    <nav>
+    <nav id="nav">
         <ul class="list-inline">
-            <li class="list-inline-item active">
-                Home
+            <li class="list-inline-item">
+                <a href="#">Home</a>
             </li>
             <li class="list-inline-item">
-                Scripts
+                <a href="#scripts">Scripts</a>
             </li>
             <li class="list-inline-item">
-                Contact
+                <a href="#contact">Contact</a>
             </li>
         </ul>
     </nav>
@@ -28,20 +28,16 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-    .thumbnail img {
-        max-width: 100%;
-    }
+<style lang="sass" scoped>
+    .thumbnail img
+        max-width: 100%
 
-    h3 {
-        margin: 40px 0 0;
-    }
+    li
+        font-size: 1.5em
 
-    li {
-        font-size: 1.5em;
-    }
+    li.active
+        border-bottom: 2px solid white !important
 
-    li.active {
-        border-bottom: 2px solid white !important;
-    }
+    a
+        color: white !important
 </style>
