@@ -2,7 +2,7 @@
     <b-col cols="3" class="script">
         <div class="thumbnail">
             <img :src="imgSrc">
-            <div class="caption-left">{{price ? price : 'FREE'}}</div>
+            <div class="caption-left">{{price ? `$${price}` : 'FREE'}}</div>
         </div>
 
         <h4 class="script-title">{{scriptName}}</h4>

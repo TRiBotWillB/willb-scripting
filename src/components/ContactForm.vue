@@ -60,7 +60,7 @@
                 ></b-form-textarea>
             </b-form-group>
 
-            <b-button block class="mt-5" type="submit" variant="outline-info">Send Message</b-button>
+            <b-button block class="mt-5 btn-blue" type="submit">Send Message</b-button>
         </b-form>
     </div>
 </template>

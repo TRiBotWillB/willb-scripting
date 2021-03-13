@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<VBox fx:id="hb" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="400.0" prefHeight="800.0" prefWidth="800.0" stylesheets="@stylesheets/gui.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scripts.Farmer.gui.WebViewController">
+    <children>
+        <HBox alignment="CENTER" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" prefHeight="28.0" prefWidth="600.0" styleClass="title" stylesheets="@stylesheets/gui.css">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" styleClass="text-white" text="WB" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-green" text="Farmer" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                    </HBox.margin>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-white" text="Pro" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Text>
+            </children>
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+        </HBox>
+        <WebView fx:id="web" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+    </children>
+</VBox>

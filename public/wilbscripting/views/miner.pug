@@ -1,0 +1,115 @@
+doctype html
+html
+    head
+        title= title
+
+        meta(charset="utf-8")
+
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+
+        link(href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@200;400&display=swap"
+            rel="stylesheet")
+
+        link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF" crossorigin="anonymous")
+
+        link(rel='stylesheet', href="/stylesheets/wbgui.css")
+
+    body
+        .container-fluid.h-100.w-100.d-flex.flex-column
+            #header.row.text-center.justify-content-center
+                p#window-controls(onclick='app.exit();') - X
+                h1.main-header
+                    | WB
+                    span.text-blue Miner
+            .row.text-center.justify-content-center.mt-3.img-nav
+                .col-12.mx-auto.text-center.justify-content-center
+                    img.mr-0.mr-sm-5.img-btn(src='/images/icons/pickaxe.png')
+                    img.mr-0.mr-sm-5.img-btn(src='/images/icons/user.png')
+                    img.img-btn(src='/images/icons/settings.png')
+            #main-content.container-fluid.mt-3
+                .row.text-center.justify-content-center
+                    .col-12.col-md-12.col-lg-8.mx-auto.table-wrapper(height='20vh')
+                        table#task-table.table.table-borderless(cellpadding='0' cellspacing='0' style='height: 20vh;')
+                            thead
+                                tr
+                                    th(scope='col')
+                                        i.fas.fa-axe.mr-2
+                                        | Rock(s)
+                                    th(scope='col')
+                                        i.fas.fa-compass.mr-2
+                                        | Location
+                                    th(scope='col')
+                                        i.fas.fa-question-circle.mr-2
+                                        | Condition
+                            tbody.d-block
+                .row.justify-content-start
+                    .ores.col-5.d-flex.text-center.justify-content-center.mt-3
+                        div
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                        div
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                        div
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                        div1
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                            img.img-btn(src='/images/icons/clay2.png')
+                    .col-7.mt-3
+                        form
+                            .input-group
+                                .input-group-prepend
+                                    span.input-group-text Mine Tile:
+                                input.form-control(type='text')
+                                .input-group-append
+                                    span.input-group-text
+                                        i.far.fa-compass
+                            .input-group.mt-3
+                                .input-group-prepend
+                                    span.input-group-text Stop Condition:
+                                input.form-control(type='text')
+                                .input-group-append
+                                    span.input-group-text
+                                        i.far.fa-compass
+                            .input-group.mt-3
+                                .input-group-prepend
+                                    span.input-group-text Stop Amount:
+                                input.form-control(type='text')
+                                .input-group-append
+                                    span.input-group-text
+                                        i.far.fa-compass
+            footer.justify-content-between.w-100
+                .container-fluid.justify-content-center
+                    .row
+                        .col-2.text-left
+                        .col-8.text-center
+                            img.mr-0.mr-sm-5.img-btn.img-btn-lg(src='/images/icons/stop.png')
+                            img.img-btn.img-btn-lg(src='/images/icons/play.png')
+                        .col-2.text-right
+                            button.fab.fa-discord.btn-no-bg.fa-3x
+
+
+        script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous")
+
+        script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous")
+
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous")
